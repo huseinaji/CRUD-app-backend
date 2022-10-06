@@ -1,0 +1,1457 @@
+{
+	"info": {
+		"_postman_id": "caad1f1c-2d1a-44cc-a7d9-7cfd91d07453",
+		"name": "CRUDfullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22510850"
+	},
+	"item": [
+		{
+			"name": "login admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"husein\",\r\n    \"email\": \"huseinaji@gmail.com\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"aji\",\r\n    \"email\": \"aji@gmail.com\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e7-cXe0zp18XvF4oLikpSyIJmEF8dk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 11:55:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"login success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getAllUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllUser",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "716"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2cc-xRNnfWepYmWPTOVTENlNiqxXmwk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 11:56:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"husein\",\n        \"email\": \"huseinaji@gmail.com\",\n        \"role\": \"guest\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODYzNjUyLCJleHAiOjE2NjQ4NzA4NTJ9.I4nTTimANZ6pUHv7DGEqGGGFaN0kY_-KxhamYQlmY_s\",\n        \"createdAt\": \"2022-10-03T12:00:03.513Z\",\n        \"updatedAt\": \"2022-10-04T06:07:32.514Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"aji\",\n        \"email\": \"aji@gmail.com\",\n        \"role\": \"admin\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA\",\n        \"createdAt\": \"2022-10-04T11:50:34.067Z\",\n        \"updatedAt\": \"2022-10-04T11:55:57.005Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"buku\",\r\n    \"userId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create Transaction",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kursi\",\r\n    \"userId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-BLqA94BYmO0I252omOSQyTrf15c\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 11:51:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"transaction success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "read transaction admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "read transaction admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "929"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a1-ZTaJc8SHHO6jKAq5A4KMJm2GKws\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 11:58:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"success\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-03T12:37:57.974Z\",\n            \"createdAt\": \"2022-10-03T12:37:57.974Z\",\n            \"updatedAt\": \"2022-10-03T12:37:57.974Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T03:33:59.021Z\",\n            \"createdAt\": \"2022-10-04T03:33:59.023Z\",\n            \"updatedAt\": \"2022-10-04T03:33:59.023Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 6,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T03:34:04.009Z\",\n            \"createdAt\": \"2022-10-04T03:34:04.009Z\",\n            \"updatedAt\": \"2022-10-04T03:34:04.009Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 7,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T11:51:11.078Z\",\n            \"createdAt\": \"2022-10-04T11:51:11.081Z\",\n            \"updatedAt\": \"2022-10-04T11:51:11.081Z\",\n            \"userId\": 3\n        },\n        {\n            \"id\": 8,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T11:51:16.642Z\",\n            \"createdAt\": \"2022-10-04T11:51:16.642Z\",\n            \"updatedAt\": \"2022-10-04T11:51:16.642Z\",\n            \"userId\": 3\n        },\n        {\n            \"id\": 10,\n            \"name\": \"kursi\",\n            \"date\": \"2022-10-04T11:51:35.943Z\",\n            \"createdAt\": \"2022-10-04T11:51:35.943Z\",\n            \"updatedAt\": \"2022-10-04T11:51:35.943Z\",\n            \"userId\": 3\n        }\n    ],\n    \"totalTransaction\": 6\n}"
+				}
+			]
+		},
+		{
+			"name": "update transaction admin",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sepatu nike\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/transaction/update/7",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction",
+						"update",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update transaction admin",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sepatu nike\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/transaction/update/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"update",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-TyxSnROQB7LiB0Nc/NVxDi0PUag\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 12:20:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"transaction updated\",\n    \"data\": [\n        {\n            \"id\": 7,\n            \"name\": \"sepatu nike\",\n            \"date\": \"2022-10-04T11:51:11.078Z\",\n            \"createdAt\": \"2022-10-04T11:51:11.081Z\",\n            \"updatedAt\": \"2022-10-04T12:20:01.079Z\",\n            \"userId\": 3\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete transaction admin",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/transaction/delete/7",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete transaction admin",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/transaction/delete/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-JcBabw59cwdSn2ESTYPlffN5JX4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 12:21:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"transaction deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "search data transaksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/transaction/filter?date=2022-10-03",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-10-03"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "search by date & name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?date=2022-10-04&name=sepatu",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-10-04"
+								},
+								{
+									"key": "name",
+									"value": "sepatu"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "177"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b1-NBLzOEzOmux7QQJEV/ecWJRtAfY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 12:30:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T03:33:59.021Z\",\n            \"createdAt\": \"2022-10-04T03:33:59.023Z\",\n            \"updatedAt\": \"2022-10-04T03:33:59.023Z\",\n            \"userId\": 1\n        }\n    ]\n}"
+				},
+				{
+					"name": "search by date",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?date=2022-10-04",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-10-04"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "623"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26f-CfQe1OpQ795bCRWDqP4ZYo68gL0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 12:30:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T03:33:59.021Z\",\n            \"createdAt\": \"2022-10-04T03:33:59.023Z\",\n            \"updatedAt\": \"2022-10-04T03:33:59.023Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 6,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T03:34:04.009Z\",\n            \"createdAt\": \"2022-10-04T03:34:04.009Z\",\n            \"updatedAt\": \"2022-10-04T03:34:04.009Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 8,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T11:51:16.642Z\",\n            \"createdAt\": \"2022-10-04T11:51:16.642Z\",\n            \"updatedAt\": \"2022-10-04T11:51:16.642Z\",\n            \"userId\": 3\n        },\n        {\n            \"id\": 10,\n            \"name\": \"sepatu nike\",\n            \"date\": \"2022-10-04T11:51:35.943Z\",\n            \"createdAt\": \"2022-10-04T11:51:35.943Z\",\n            \"updatedAt\": \"2022-10-04T12:24:36.847Z\",\n            \"userId\": 3\n        }\n    ]\n}"
+				},
+				{
+					"name": "search by name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWppIiwiZW1haWwiOiJhamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY0ODg0NTU2LCJleHAiOjE2NjQ4OTE3NTZ9.DHcE35FqxlKu7HzFts9Tc6pWcBK2ZlFXWAHhZ50iUEA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?name=sepatu",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sepatu"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "326"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"146-eRBu6AbocP+iVKI5bns7ykIL5EM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 12:34:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 8,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T11:51:16.642Z\",\n            \"createdAt\": \"2022-10-04T11:51:16.642Z\",\n            \"updatedAt\": \"2022-10-04T11:51:16.642Z\",\n            \"userId\": 3\n        },\n        {\n            \"id\": 10,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T11:51:35.943Z\",\n            \"createdAt\": \"2022-10-04T11:51:35.943Z\",\n            \"updatedAt\": \"2022-10-04T12:24:36.847Z\",\n            \"userId\": 3\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "login guest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"husein\",\r\n    \"email\": \"huseinaji@gmail.com\",\r\n    \"role\": \"guest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login guest",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"husein\",\r\n    \"email\": \"huseinaji@gmail.com\",\r\n    \"role\": \"guest\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "243"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f3-FQyHjR0x2lb7jaX3/UJp/HSfjxw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 13:15:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"login success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "read transaction guest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "read transaction guest",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26-ueBf7JVL8mQuzGw0b9fxXusYd+Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 13:18:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"success\",\n    \"totalTransaction\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "update transaction guest",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sepatu nike\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/transaction/update/7",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction",
+						"update",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update transaction guest",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sepatu nike\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/transaction/update/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"update",
+								"7"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-83wTzuRHrcxaYtufiwqHQhwM9l0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 13:23:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Role bukan admin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete transaction guest",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/transaction/delete/7",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete transaction guest",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNjY0ODg5MzIxLCJleHAiOjE2NjQ4OTY1MjF9.wXUc9HsoxBMBwkFm59l7MoPTkYuCClhpyEg34jwSIo0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction/delete/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-83wTzuRHrcxaYtufiwqHQhwM9l0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Oct 2022 13:25:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Role bukan admin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "filter transaction admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY1MDQ0NzcxLCJleHAiOjE2NjUwNTE5NzF9._y5JTwjXMa1zYeAi8TOyKG8pD0K8GTrlitD1fMlIVhE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/transaction/filter?name=&date=",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transaction",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						},
+						{
+							"key": "date",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "non query",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY1MDQ0NzcxLCJleHAiOjE2NjUwNTE5NzF9._y5JTwjXMa1zYeAi8TOyKG8pD0K8GTrlitD1fMlIVhE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?name=&date=",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "date",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "469"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d5-qVWIjCYKot2UvW22pxTLpeQc8+k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 08:45:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-03T12:37:57.974Z\",\n            \"createdAt\": \"2022-10-03T12:37:57.974Z\",\n            \"updatedAt\": \"2022-10-03T12:37:57.974Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"sepatu\",\n            \"date\": \"2022-10-04T03:33:59.021Z\",\n            \"createdAt\": \"2022-10-04T03:33:59.023Z\",\n            \"updatedAt\": \"2022-10-04T03:33:59.023Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 6,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T03:34:04.009Z\",\n            \"createdAt\": \"2022-10-04T03:34:04.009Z\",\n            \"updatedAt\": \"2022-10-04T03:34:04.009Z\",\n            \"userId\": 1\n        }\n    ]\n}"
+				},
+				{
+					"name": "only date query",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY1MDQ0NzcxLCJleHAiOjE2NjUwNTE5NzF9._y5JTwjXMa1zYeAi8TOyKG8pD0K8GTrlitD1fMlIVhE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?name=&date=2022-10-03",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "date",
+									"value": "2022-10-03"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"af-v/t85g7OjseX+Sy4QMjor2+s4QE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 09:24:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-03T12:37:57.974Z\",\n            \"createdAt\": \"2022-10-03T12:37:57.974Z\",\n            \"updatedAt\": \"2022-10-03T12:37:57.974Z\",\n            \"userId\": 1\n        }\n    ]\n}"
+				},
+				{
+					"name": "only name query",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY1MDQ0NzcxLCJleHAiOjE2NjUwNTE5NzF9._y5JTwjXMa1zYeAi8TOyKG8pD0K8GTrlitD1fMlIVhE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?name=buku&date=",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "buku"
+								},
+								{
+									"key": "date",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "613"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"265-1bCE+P6Xjew5YxPUXpCKOqq9yGU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 09:24:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-03T12:37:57.974Z\",\n            \"createdAt\": \"2022-10-03T12:37:57.974Z\",\n            \"updatedAt\": \"2022-10-03T12:37:57.974Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T03:33:59.021Z\",\n            \"createdAt\": \"2022-10-04T03:33:59.023Z\",\n            \"updatedAt\": \"2022-10-04T03:33:59.023Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 6,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-04T03:34:04.009Z\",\n            \"createdAt\": \"2022-10-04T03:34:04.009Z\",\n            \"updatedAt\": \"2022-10-04T03:34:04.009Z\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-06T12:37:57.974Z\",\n            \"createdAt\": \"2022-10-03T12:37:57.974Z\",\n            \"updatedAt\": \"2022-10-03T12:37:57.974Z\",\n            \"userId\": 1\n        }\n    ]\n}"
+				},
+				{
+					"name": "all query",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaHVzZWluIiwiZW1haWwiOiJodXNlaW5hamlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY1MDQ0NzcxLCJleHAiOjE2NjUwNTE5NzF9._y5JTwjXMa1zYeAi8TOyKG8pD0K8GTrlitD1fMlIVhE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/transaction/filter?name=buku&date=2022-10-03",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transaction",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "buku"
+								},
+								{
+									"key": "date",
+									"value": "2022-10-03"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"af-v/t85g7OjseX+Sy4QMjor2+s4QE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 09:25:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"buku\",\n            \"date\": \"2022-10-03T12:37:57.974Z\",\n            \"createdAt\": \"2022-10-03T12:37:57.974Z\",\n            \"updatedAt\": \"2022-10-03T12:37:57.974Z\",\n            \"userId\": 1\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
